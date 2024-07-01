@@ -10,9 +10,6 @@ async function bootstrap() {
     origin: ['http://localhost:8080'],
     credentials: true,
   });
-  await app.listen(3000, () => {
-    console.log("irunn");
-    
-  });
+  await app.listen(3000);
 }
 bootstrap();

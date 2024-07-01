@@ -1,21 +1,21 @@
 version: "3"
 
 services:
-  frontend:
-    build: ./front-end
-    ports:
-      - "8080:8080"
+  # frontend:
+  #   build: ./front-end
+  #   ports:
+  #     - "8080:8080"
 
-  backend:
-    build: ./back-end
-    ports:
-      - "3000:3000"
-    environment:
-      - POSTGRES_HOST=db_dev
-      - POSTGRES_PORT=5432
-      - POSTGRES_USER=taskManager
-      - POSTGRES_PASSWORD=taskManager2024
-      - POSTGRES_DB=db_taskmanager
+  # backend:
+  #   build: ./back-end
+  #   ports:
+  #     - "3000:3000"
+  #   environment:
+  #     - POSTGRES_HOST=db_dev
+  #     - POSTGRES_PORT=5432
+  #     - POSTGRES_USER=taskManager
+  #     - POSTGRES_PASSWORD=taskManager2024
+  #     - POSTGRES_DB=db_taskmanager
   db_dev:
     image: postgres
     restart: always
