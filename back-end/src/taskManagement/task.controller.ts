@@ -7,13 +7,16 @@ import {
   Param,
   Post,
   Put,
+  UseGuards,
 } from '@nestjs/common';
 import { TaskService } from './task.service';
 import { TaskEntity } from './entities/task.entity';
 import { CreateTaskDto } from './dto/createtask.dto';
 import { UpdateTaskDto } from './dto/updatetask.dto';
+import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 
 @Controller('tasks')
+@UseGuards(JwtAuthGuard)
 export class TaskController {
   constructor(private readonly taskService: TaskService) {}
 

@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import Login from "../components/Login.vue";
+import Register from "../components/Register.vue";
+import TaskList from "@/components/TaskList.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -7,6 +10,9 @@ const routes: Array<RouteRecordRaw> = [
     name: "home",
     component: HomeView,
   },
+  { path: "/login", component: Login },
+  { path: "/register", component: Register },
+  { path: "/tasks", component: TaskList },
   {
     path: "/about",
     name: "about",
@@ -19,7 +25,7 @@ const routes: Array<RouteRecordRaw> = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(),
   routes,
 });
 
